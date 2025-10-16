@@ -1,221 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="r05cmkjA1lRP0f2DXc1aFLOb7L4iykQDDcW2W7NG1kk" />
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ✅ Basic SEO Setup -->
+   <meta name="google-site-verification" content="r05cmkjA1lRP0f2DXc1aFLOb7L4iykQDDcW2W7NG1kk" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn coding, programming, AI, web development, and general subjects like history, geography, and math — all in one place.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Python, Web Development, AI, Data Science, Coding School, Learn Coding, Programming Languages, History, Geography, Math">
+  <meta name="author" content="X3School">
+  <title>X3School | Learn Coding and General Subjects</title>
 
-  <title>X3School — Learn Coding, Build Projects, Get Hired</title>
-  <meta name="description" content="X3School: Practical coding tutorials, project-based courses, interview questions and blog articles to help you become a confident developer. HTML, CSS, JavaScript, Python, Flask, Django and more." />
-  <meta name="keywords" content="learn coding, programming tutorial, HTML CSS JavaScript, Python tutorial, web development courses, coding projects" />
-  <meta name="author" content="X3School" />
+  <!-- ✅ Open Graph Meta Tags -->
+  <meta property="og:title" content="X3School - Learn Coding, Web Development & More">
+  <meta property="og:description" content="Master coding, AI, and general knowledge subjects. Free tutorials, projects, and notes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://x3school.com/">
+  <meta property="og:image" content="https://x3school.com/images/preview.png">
 
-  <!-- Canonical -->
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="https://x3school.com/images/favicon.png" type="image/png">
   <link rel="canonical" href="https://www.x3school.example/" />
-  <!-- Sitemap (generate on server) -->
-  <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Robots -->
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="X3School — Learn Coding, Build Projects" />
-  <meta property="og:description" content="Hands-on programming tutorials, short courses and projects in web and backend development." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.x3school.example/" />
-  <meta property="og:image" content="/images/og-image.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="X3School — Learn Coding" />
-  <meta name="twitter:description" content="Project-focused coding tutorials and interview prep." />
-  <meta name="twitter:image" content="/images/twitter-card.jpg" />
-
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "X3School",
-    "url": "https://www.x3school.example/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.x3school.example/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <!-- Preconnect & preload for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <!-- ✅ CSS Styling -->
   <style>
-    :root{--accent:#0b74de;--muted:#6b7280;--bg:#0f1724;color-scheme:light}
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.6;margin:0;color:#0f1724;background:#fff}
-    header{padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid #eef2f6}
-    .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:inherit}
-    .brand .logo{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#06b6d4);border-radius:8px;display:grid;place-items:center;color:#fff;font-weight:700}
-    nav a{margin-left:1rem;text-decoration:none;color:var(--muted);font-weight:600}
-    .container{max-width:1100px;margin:1.25rem auto;padding:0 1rem}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:center;margin-top:1rem}
-    .card{background:#f8fafc;padding:1.25rem;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,30,.04)}
-    h1{font-size:clamp(1.6rem,3vw,2.4rem);margin:0 0 .5rem}
-    p.lead{color:var(--muted);margin:0 0 1rem}
-    .cta{display:inline-block;background:var(--accent);color:#fff;padding:.6rem .9rem;border-radius:8px;text-decoration:none;font-weight:700}
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
-    .feature{background:#fff;border:1px solid #eef2f6;padding:1rem;border-radius:10px}
-    footer{padding:2rem 1rem;background:#0b1220;color:#fff;margin-top:2rem}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-    /* Responsive */
-    @media (max-width:900px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:560px){.features{grid-template-columns:1fr}.hero{gap:1rem}}
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-    /* code snippet styling */
-    pre{overflow:auto;padding:1rem;border-radius:8px;background:#0b1220;color:#e6eef8}
-    code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.95rem}
+    header {
+      background: linear-gradient(90deg, #0078d7, #00bcd4);
+      color: white;
+      text-align: center;
+      padding: 40px 10px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    /* 🧭 Scrollable Skill Nav Bar */
+    nav {
+      background: #111;
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 12px 10px;
+      scroll-behavior: smooth;
+    }
+
+    nav a {
+      display: inline-block;
+      color: #fff;
+      background: #222;
+      text-decoration: none;
+      padding: 10px 18px;
+      margin-right: 10px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background: #00bcd4;
+      color: #111;
+    }
+
+    nav::-webkit-scrollbar {
+      height: 6px;
+    }
+    nav::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 10px;
+    }
+
+    /* Empty body section for your content */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      color: #777;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- 🧭 Header -->
   <header>
-    <a class="brand" href="/">
-      <div class="logo">X3</div>
-      <div>
-        <div style="font-weight:700">X3School</div>
-        <small style="color:var(--muted);font-weight:600">Learn. Build. Ship.</small>
-      </div>
-    </a>
-
-    <nav aria-label="Primary">
-      <a href="/courses">Courses</a>
-      <a href="/tutorials">Tutorials</a>
-      <a href="/blog">Blog</a>
-      <a href="/contact">Contact</a>
-    </nav>
+    <h1>X3School</h1>
+    <p>Learn Coding, Programming, AI & General Knowledge — All in One Place</p>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div>
-        <h1>Build real projects — learn web development the practical way</h1>
-        <p class="lead">Short, hands-on lessons in HTML, CSS, JavaScript and Python. Each lesson includes a mini-project, source code and interview-style questions.</p>
-        <a class="cta" href="/courses">Start Learning — Free</a>
+  <!-- 🔗 Scrollable Skills Navbar -->
+  <nav>
+    <a href="#">HTML</a>
+    <a href="#">CSS</a>
+    <a href="#">JavaScript</a>
+    <a href="#">React.js</a>
+    <a href="#">Python</a>
+    <a href="#">Java</a>
+    <a href="#">C</a>
+    <a href="#">C++</a>
+    <a href="#">C#</a>
+    <a href="#">PHP</a>
+    <a href="#">Kotlin</a>
+    <a href="#">Swift</a>
+    <a href="#">Go</a>
+    <a href="#">Dart</a>
+    <a href="#">Rust</a>
+    <a href="#">MySQL</a>
+    <a href="#">MongoDB</a>
+    <a href="#">Node.js</a>
+    <a href="#">Django</a>
+    <a href="#">Flask</a>
+    <a href="#">Laravel</a>
+    <a href="#">Bootstrap</a>
+    <a href="#">Tailwind CSS</a>
+    <a href="#">UI/UX</a>
+    <a href="#">Data Science</a>
+    <a href="#">Machine Learning</a>
+    <a href="#">Artificial Intelligence</a>
+    <a href="#">Deep Learning</a>
+    <a href="#">TensorFlow</a>
+    <a href="#">Git</a>
+    <a href="#">GitHub</a>
+    <a href="#">AWS</a>
+    <a href="#">Google Cloud</a>
+    <a href="#">Digital Marketing</a>
+    <a href="#">SEO</a>
+    <a href="#">Cyber Security</a>
+    <a href="#">Ethical Hacking</a>
+    <a href="#">Blockchain</a>
+    <a href="#">ChatGPT / OpenAI</a>
+    <a href="#">Android Development</a>
+    <a href="#">iOS Development</a>
+    <a href="#">History</a>
+    <a href="#">Geography</a>
+    <a href="#">Science</a>
+    <a href="#">Mathematics</a>
+    <a href="#">Political Science</a>
+    <a href="#">Economics</a>
+    <a href="#">Hindi</a>
+    <a href="#">English</a>
+  </nav>
 
-        <div class="features" aria-hidden="false">
-          <div class="feature card">
-            <h3>Project-based</h3>
-            <p class="muted">Ship real projects you can show in your portfolio.</p>
-          </div>
-          <div class="feature card">
-            <h3>Interview Prep</h3>
-            <p class="muted">Curated questions & mock interviews for freshers.</p>
-          </div>
-          <div class="feature card">
-            <h3>Community</h3>
-            <p class="muted">Join our Discord and get code reviews.</p>
-          </div>
-        </div>
+  <!-- 🧩 Empty Body Section -->
+  <section>
+    <h2>Your Content Area</h2>
+    <p>Write your own content here...</p>
+  </section>
 
-        <h2 style="margin-top:1.25rem">Popular tutorial — Build a responsive nav</h2>
-        <p class="lead">A step-by-step guide to building a mobile-first navigation without JavaScript.</p>
-
-        <pre aria-label="code example"><code>&lt;nav&gt;
-  &lt;!-- semantic nav --&gt;
-&lt;/nav&gt;</code></pre>
-      </div>
-
-      <aside class="card" aria-labelledby="signup-heading">
-        <h3 id="signup-heading">Get free updates</h3>
-        <p class="muted">Subscribe to short tutorials and project templates.</p>
-        <form action="/subscribe" method="post" aria-label="Subscribe form">
-          <label for="email" class="visually-hidden">Email address</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid #e6eef8;margin-bottom:.6rem">
-          <button type="submit" class="cta" style="width:100%">Subscribe</button>
-        </form>
-        <p style="font-size:.9rem;color:var(--muted);margin-top:.75rem">No spam. Unsubscribe anytime.</p>
-      </aside>
-    </section>
-
-    <!-- Articles preview with article schema -->
-    <section aria-labelledby="latest-articles" style="margin-top:1.5rem">
-      <h2 id="latest-articles">Latest articles</h2>
-
-      <article itemscope itemtype="https://schema.org/Article" style="margin-top:.75rem;margin-bottom:1rem;padding:1rem;border-radius:10px;border:1px solid #eef2f6">
-        <meta itemprop="mainEntityOfPage" content="https://www.x3school.example/blog/responsive-nav">
-        <h3 itemprop="headline">How to build a responsive navigation (no JS)</h3>
-        <p itemprop="description" class="muted">A minimal accessible navigation that works on small screens.</p>
-        <p style="margin:0;font-size:.9rem;color:var(--muted)">Published <time datetime="2025-10-01">Oct 1, 2025</time></p>
-      </article>
-
-      <article itemscope itemtype="https://schema.org/Article" style="margin-top:.75rem;margin-bottom:1rem;padding:1rem;border-radius:10px;border:1px solid #eef2f6">
-        <meta itemprop="mainEntityOfPage" content="https://www.x3school.example/blog/python-basics">
-        <h3 itemprop="headline">Python basics: from variables to functions</h3>
-        <p itemprop="description" class="muted">A beginner-friendly introduction with short exercises.</p>
-        <p style="margin:0;font-size:.9rem;color:var(--muted)">Published <time datetime="2025-09-20">Sep 20, 2025</time></p>
-      </article>
-
-    </section>
-
-    <!-- FAQ using FAQPage schema -->
-    <section style="margin-top:1.5rem" aria-label="FAQ">
-      <h2>Frequently asked</h2>
-      <div itemscope itemtype="https://schema.org/FAQPage">
-        <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-          <h3 itemprop="name">Are the courses free?</h3>
-          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">Some tutorials are free. Premium project-courses are paid and include review sessions.</p>
-          </div>
-        </div>
-
-        <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-          <h3 itemprop="name">Do you provide certificates?</h3>
-          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">Yes — completion certificates are available for paid courses.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
+  <!-- 📞 Footer -->
   <footer>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap">
-      <div style="max-width:420px">
-        <h4 style="margin:0 0 .5rem">X3School</h4>
-        <p style="margin:0;color:rgba(255,255,255,.8)">Practical coding tutorials, projects and interview prep for aspiring developers.</p>
-      </div>
-
-      <nav aria-label="Footer" style="display:flex;gap:1rem;align-items:flex-start">
-        <div>
-          <h5>Resources</h5>
-          <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,.9)">
-            <li><a href="/blog" style="color:inherit;text-decoration:none">Blog</a></li>
-            <li><a href="/courses" style="color:inherit;text-decoration:none">Courses</a></li>
-            <li><a href="/tutorials" style="color:inherit;text-decoration:none">Tutorials</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-
-    <div style="border-top:1px solid rgba(255,255,255,.06);margin-top:1rem;padding-top:1rem;display:flex;justify-content:space-between;align-items:center">
-      <small>© 2025 X3School — All rights reserved</small>
-      <small><a href="/privacy" style="color:inherit;">Privacy</a> · <a href="/terms" style="color:inherit;">Terms</a></small>
-    </div>
+    © 2025 X3School | Learn Coding & General Subjects | Designed with ❤️ in India
   </footer>
-
-  <!-- Minimal analytics placeholder (load after user interaction) -->
-  <script>
-    // Defer analytics until user interacts to improve performance & privacy
-    function loadAnalytics(){
-      // example: create script tag for analytics provider
-      window.removeEventListener('click', loadAnalytics);
-    }
-    window.addEventListener('click', loadAnalytics, {once:true});
-  </script>
 
 </body>
 </html>
