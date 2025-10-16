@@ -22,12 +22,13 @@
   <link rel="canonical" href="https://www.x3school.example/" />
 
   <!-- ✅ CSS Styling -->
+  
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
     }
 
     body {
@@ -36,24 +37,101 @@
       line-height: 1.6;
     }
 
+    /* 🌟 Fixed Header */
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       background: linear-gradient(90deg, #0078d7, #00bcd4);
       color: white;
-      text-align: center;
-      padding: 40px 10px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      flex-wrap: wrap;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
-    header p {
-      font-size: 1.1rem;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
-    /* 🧭 Scrollable Skill Nav Bar */
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #111;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 20px;
+      padding: 5px 10px;
+      margin: 8px 0;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      padding: 6px 8px;
+      font-size: 0.9rem;
+      border-radius: 20px;
+      width: 160px;
+    }
+
+    .search-bar button {
+      background: #00bcd4;
+      border: none;
+      color: white;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+    }
+
+    .auth-buttons a {
+      color: white;
+      margin-left: 10px;
+      padding: 6px 12px;
+      border: 1px solid white;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .auth-buttons a:hover {
+      background: white;
+      color: #0078d7;
+    }
+
+    /* 🍔 Hamburger Menu */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* 🧭 Scrollable Skill Bar */
     nav {
+      margin-top: 70px; /* space for fixed header */
       background: #111;
       display: flex;
       overflow-x: auto;
@@ -83,14 +161,15 @@
     nav::-webkit-scrollbar {
       height: 6px;
     }
+
     nav::-webkit-scrollbar-thumb {
       background: #555;
       border-radius: 10px;
     }
 
-    /* Empty body section for your content */
+    /* 🧩 Empty Content Area */
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
       color: #777;
     }
@@ -103,26 +182,60 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
+    /* 📱 Responsive Design */
+    @media (max-width: 900px) {
+      .nav-links,
+      .search-bar,
+      .auth-buttons {
+        display: none;
       }
-      nav a {
-        font-size: 0.85rem;
-        padding: 8px 14px;
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links.mobile-active,
+      .search-bar.mobile-active,
+      .auth-buttons.mobile-active {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        background: #0088cc;
+        padding: 10px;
+        flex-wrap: wrap;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 🧭 Header -->
+  <!-- 🌟 Fixed Header -->
   <header>
-    <h1>X3School</h1>
-    <p>Learn Coding, Programming, AI & General Knowledge — All in One Place</p>
+    <div class="logo">X3School</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links">
+      <a href="#">Tutorials</a>
+      <a href="#">References</a>
+      <a href="#">Exercises</a>
+      <a href="#">Certificates</a>
+      <a href="#">For Teachers</a>
+      <a href="#">Get Certified</a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>🔍</button>
+    </div>
+
+    <div class="auth-buttons">
+      <a href="#">Sign In</a>
+      <a href="#">Sign Up</a>
+    </div>
   </header>
 
-  <!-- 🔗 Scrollable Skills Navbar -->
+  <!-- 🧭 Scrollable Skills -->
   <nav>
     <a href="#">HTML</a>
     <a href="#">CSS</a>
@@ -175,7 +288,7 @@
     <a href="#">English</a>
   </nav>
 
-  <!-- 🧩 Empty Body Section -->
+  <!-- 🧩 Empty Section for Content -->
   <section>
     <h2>Your Content Area</h2>
     <p>Write your own content here...</p>
@@ -186,5 +299,12 @@
     © 2025 X3School | Learn Coding & General Subjects | Designed with ❤️ in India
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("mobile-active");
+      document.querySelector(".search-bar").classList.toggle("mobile-active");
+      document.querySelector(".auth-buttons").classList.toggle("mobile-active");
+    }
+  </script>
 </body>
 </html>
