@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Introduction Course | Learn HTML Basics, Forms, and Elements | X3School</title>
+
+  <meta name="description" content="Start learning HTML with X3School! This comprehensive introduction covers HTML basics, elements, forms, links, images, and semantic structure with hands-on examples.">
+
+  <meta name="keywords" content="HTML introduction, HTML basics, HTML tutorial, HTML elements, HTML forms, HTML course, learn web development, X3Schools HTML">
+
+  <meta name="author" content="X3Schools">
+
+  <meta property="og:title" content="HTML Introduction Course | Learn HTML Basics" />
+  <meta property="og:description" content="Master the fundamentals of HTML, the language of the web. Learn to structure your first web page quickly and effectively with X3School." />
+  <meta property="og:url" content="https://x3schools.onrender.com/html/introduction" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://x3schools.onrender.com/static/images/x3school-banner.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HTML Introduction Course | X3School" />
+  <meta name="twitter:description" content="Dive into HTML: learn the structure of web pages, elements, and attributes with X3School's practical guide." />
+  <meta name="twitter:image" content="https://x3school.onrender.com/static/images/x3school-banner.png" />
+
+  <link rel="icon" type="image/png" href="/static/images/favicon.png" />
+
+  <link rel="canonical" href="https://x3schools.onrender.com/html-introduction" />
+  <style>
+    /* ----------------------------------- */
+    /* Existing Styles (Unchanged)         */
+    /* ----------------------------------- */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .topic-section {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      color: #282a35;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .topic-section h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .topic-section p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .button-group a {
+      display: block;
+      padding: 15px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .button-group a.green-btn { background-color: #04AA6D; color: white; }
+    .button-group a.yellow-btn { background-color: #FFF4A3; color: #282a35; }
+    .button-group a.dark-btn { background-color: #282a35; color: white; }
+    .button-group a.pink-btn { background-color: #FFC0C7; color: #282a35; }
+
+    .button-group a.green-btn:hover { background-color: #059862; }
+    .button-group a.yellow-btn:hover { background-color: #FFE670; }
+    .button-group a.dark-btn:hover { background-color: #1a1c22; }
+    .button-group a.pink-btn:hover { background-color: #FFB0B8; }
+
+    .hero-section {
+      background-color: #282a35;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .hero-section h1 { font-size: 60px; margin-bottom: 20px; font-weight: bold; }
+    .hero-section p { font-size: 20px; margin-bottom: 40px; max-width: 600px; line-height: 1.5; }
+
+    .hero-search {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 25px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .hero-search input {
+      flex-grow: 1;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .hero-search button {
+      background-color: #04AA6D;
+      border: none;
+      padding: 12px 20px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      outline: none;
+    }
+    
+    .top-header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed; 
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 40px;
+    }
+
+    .brand-name { font-size: 24px; font-weight: bold; text-decoration: none; color: white; }
+
+    .search-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 60px;
+      background-color: #333;
+      display: none;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1001;
+    }
+
+    .search-input-container { display: flex; width: 100%; align-items: center; }
+    .search-overlay input[type="text"] {
+      flex-grow: 1; padding: 10px; border: none; border-radius: 4px; font-size: 16px; margin-right: 10px;
+    }
+    .search-overlay .close-btn {
+      background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 5px;
+    }
+
+    .header-controls { display: flex; align-items: center; }
+    .search-icon, .auth-buttons button {
+      background: none; border: none; color: white; cursor: pointer; font-size: 16px; padding: 8px 10px; margin-left: 10px;
+    }
+    
+    .sub-header {
+      background-color: #e7e7e7;
+      margin-top: 0; 
+      position: fixed; 
+      top: 60px; /* Fixed right below the 40px top-header */
+      left: 0; right: 0;
+      z-index: 999;
+      display: flex; 
+      padding: 0; 
+    }
+
+    .scrollable-menu {
+      white-space: nowrap;
+      overflow-x: auto; 
+      padding-left: 50px; 
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .menu-icon-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50px; 
+      background-color: #e7e7e7; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000; 
+      border-right: 1px solid #ddd; 
+    }
+
+    .hamburger-icon {
+      background: none;
+      border: none;
+      color: #333;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .menu-item {
+      display: inline-block;
+      padding: 5px 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .menu-item:hover { background-color: #ddd; border-radius: 4px; }
+    
+    .main-content { 
+        padding-top: 90px; 
+        /* ADDED: Style for main content area to make it readable */
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    } 
+
+    /* NEW STYLES for HTML Content */
+    .content-area {
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+    .content-area h1 {
+        font-size: 32px;
+        color: #04AA6D;
+    }
+    .content-area h2 {
+        font-size: 24px;
+        margin-top: 25px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+    .content-area code {
+        background-color: #f0f0f0;
+        padding: 2px 4px;
+        border-radius: 3px;
+        color: #d94e38;
+    }
+    .code-example {
+        background-color: #282a35;
+        color: white;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-family: monospace;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .code-example pre {
+        margin: 0;
+        white-space: pre-wrap;
+    }
+    
+    /* MODIFIED SIDE MENU STYLES */
+    .side-menu {
+        height: 100%;
+        width: 0; 
+        position: fixed;
+        z-index: 1002; 
+        top: 0;
+        left: 0;
+        background-color: #282a35; /* Darker background for menu */
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.2s; 
+        color: white;
+    }
+
+    .side-menu-content a {
+        padding: 10px 8px 10px 15px; /* Adjusted padding */
+        text-decoration: none;
+        font-size: 16px;
+        color: #e7e7e7;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid #333; /* Separator */
+    }
+
+    .side-menu-content a:hover {
+        color: white;
+        background-color: #04AA6D; /* Highlight on hover */
+    }
+
+    .side-menu .close-btn-menu {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* 🎥 Video Section - Retained */
+    .video-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .video-section h2 {
+      color: #282a35;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .video-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+      border: none;
+    }
+    /* ----------------------------------- */
+/* NEW FOOTER STYLES                   */
+/* ----------------------------------- */
+.main-footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px 10px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  gap: 30px; /* Space between columns */
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px; /* Ensures columns don't get too small on tablets */
+  padding: 10px 0;
+}
+
+.footer-column h3, .footer-column h4 {
+  color: #04AA6D; /* Green accent color */
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #bbb;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  padding: 5px 0;
+  transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.social-links a {
+  color: white;
+  font-size: 20px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #04AA6D;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-input-container">
+      <input type="text" placeholder="Search our courses..." autofocus>
+      <button class="close-btn" onclick="toggleSearch()">×</button>
+    </div>
+  </div>
+
+  <header class="top-header">
+    <a href="/" class="brand-name">x3School</a>
+    <div class="header-controls">
+      <button class="search-icon" onclick="toggleSearch()">🔍</button>
+      <div class="auth-buttons">
+        <button>SIGNUP</button>
+        <button>LOGIN</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn-menu" onclick="closeFullMenu()">×</a>
+    <div class="side-menu-content">
+        <h2>HTML Course Topics (50+)</h2>
+        <a href="#intro">1. HTML Introduction</a>
+        <a href="#basics">2. HTML Basics & Editors</a>
+        <a href="#elements">3. HTML Elements</a>
+        <a href="#attributes">4. HTML Attributes</a>
+        <a href="#headings">5. HTML Headings</a>
+        <a href="#paragraphs">6. HTML Paragraphs</a>
+        <a href="#styles">7. HTML Styles (CSS Intro)</a>
+        <a href="#formatting">8. HTML Text Formatting</a>
+        <a href="#comments">9. HTML Comments</a>
+        
+        <a href="#">--- Core Structure ---</a>
+        <a href="#links">10. HTML Links (Hyperlinks)</a>
+        <a href="#images">11. HTML Images</a>
+        <a href="#tables">12. HTML Tables</a>
+        <a href="#lists">13. HTML Lists (Ordered/Unordered)</a>
+        <a href="#blockinline">14. HTML Block and Inline</a>
+        <a href="#idclass">15. HTML id and class</a>
+
+        <a href="#">--- Forms & Input ---</a>
+        <a href="#forms">16. HTML Forms</a>
+        <a href="#inputtypes">17. HTML Input Types</a>
+        <a href="#inputattributes">18. HTML Input Attributes</a>
+        <a href="#formelements">19. HTML Form Elements (select, textarea)</a>
+        <a href="#validation">20. HTML Form Validation</a>
+
+        <a href="#">--- Advanced Topics ---</a>
+        <a href="#semantics">21. HTML Semantics (article, section, nav)</a>
+        <a href="#responsive">22. HTML Responsive Design</a>
+        <a href="#media">23. HTML Media (Audio/Video)</a>
+        <a href="#iframes">24. HTML Iframes</a>
+        <a href="#head">25. HTML Head (Metadata)</a>
+
+        <a href="#">--- HTML APIs & Graphics ---</a>
+        <a href="#canvas">26. HTML Canvas Graphics</a>
+        <a href="#svg">27. HTML SVG</a>
+        <a href="#geolocation">28. HTML Geolocation</a>
+        <a href="#dragdrop">29. HTML Drag and Drop</a>
+        
+        <a href="#">--- Reference (20+ Items) ---</a>
+        <a href="#">HTML Tag Reference</a>
+        <a href="#">HTML Attribute Reference</a>
+        <a href="#">HTML Entities</a>
+        <a href="#">HTML Colors</a>
+        <a href="#">HTML Charset</a>
+        <a href="#">HTML Doctypes</a>
+        <a href="#">HTML Best Practices</a>
+        <a href="#">HTML Accessibility (ARIA)</a>
+        <a href="#">HTML Web Storage</a>
+        <a href="#">HTML Microdata</a>
+        <a href="#">HTML vs XHTML</a>
+        <a href="#">HTML History</a>
+        <a href="#">HTML Quiz</a>
+        <a href="#">HTML Certificate</a>
+        <a href="#">Project: Build a Blog Layout</a>
+        <a href="#">Project: Build a Portfolio</a>
+        <a href="#">Project: Build a Landing Page</a>
+        <br>
+        <br>
+    </div>
+  </div>
+
+
+  <nav class="sub-header">
+    <div class="menu-icon-container">
+      <button class="hamburger-icon" onclick="openFullMenu()">☰</button> 
+    </div>
+    
+    <div class="scrollable-menu">
+      <a href="#" class="menu-item">HTML</a>
+      <a href="#" class="menu-item">CSS</a>
+      <a href="#" class="menu-item">JavaScript</a>
+      <a href="#" class="menu-item">Python</a>
+      <a href="#" class="menu-item">SQL</a>
+      <a href="#" class="menu-item">PHP</a>
+      <a href="#" class="menu-item">C++</a>
+      <a href="#" class="menu-item">Data Science</a>
+      <a href="#" class="menu-item">Machine Learning</a>
+      <a href="#" class="menu-item">AI</a>
+      <a href="#" class="menu-item">Web Dev</a>
+      <a href="#" class="menu-item">React</a>
+      <a href="#" class="menu-item">Angular</a>
+      <a href="#" class="menu-item">Vue.js</a>
+      <a href="#" class="menu-item">Node.js</a>
+      <a href="#" class="menu-item">Express</a>
+      <a href="#" class="menu-item">MongoDB</a>
+      <a href="#" class="menu-item">Django</a>
+      <a href="#" class="menu-item">Flask</a>
+      <a href="#" class="menu-item">Git</a>
+      <a href="#" class="menu-item">Docker</a>
+      <a href="#" class="menu-item">AWS</a>
+      <a href="#" class="menu-item">Azure</a>
+      <a href="#" class="menu-item">Data Structures</a>
+      <a href="#" class="menu-item">Algorithms</a>
+      <a href="#" class="menu-item">Cyber Security</a>
+      <a href="#" class="menu-item">Testing</a>
+      <a href="#" class="menu-item">UI/UX</a>
+      <a href="#" class="menu-item">Sass</a>
+      <a href="#" class="menu-item">Less</a>
+      <a href="#" class="menu-item">TypeScript</a>
+      <a href="#" class="menu-item">Kotlin</a>
+      <a href="#" class="menu-item">Swift</a>
+      <a href="#" class="menu-item">Go</a>
+      <a href="#" class="menu-item">R</a>
+      <a href="#" class="menu-item">MATLAB</a>
+      <a href="#" class="menu-item">Excel</a>
+      <a href="#" class="menu-item">Big Data</a>
+      <a href="#" class="menu-item">DevOps</a>
+      <a href="#" class="menu-item">API Dev</a>
+      <a href="#" class="menu-item">GraphQL</a>
+      <a href="#" class="menu-item">Rust</a>
+      <a href="#" class="menu-item">Perl</a>
+      <a href="#" class="menu-item">Ruby</a>
+      <a href="#" class="menu-item">C#</a>
+      <a href="#" class="menu-item">Assembly</a>
+      <a href="#" class="menu-item">Networking</a>
+      <a href="#" class="menu-item">Operating Systems</a>
+      <a href="#" class="menu-item">Game Dev</a>
+      <a href="#" class="menu-item">Cloud</a>
+      <a href="#" class="menu-item">Blockchain</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="content-area">
+        <h1 id="intro">HTML Introduction: The Foundation of the Web 🌐</h1>
+        <p>HTML (**H**yper**T**ext **M**arkup **L**anguage) is the standard markup language for documents designed to be displayed in a web browser. It is the core technology used for structuring the content of a web page.</p>
+
+        <h2>What is HTML?</h2>
+        <p>HTML describes the structure of a web page semantically and consists of a series of **elements**. HTML elements tell the browser how to display the content. Think of HTML as the *skeleton* of your website; it defines the headers, paragraphs, links, images, and other pieces of content.</p>
+
+        <h2>Basic HTML Structure</h2>
+        <p>Every HTML page must have a fundamental structure. Here is a simple example showing the required tags:</p>
+
+        <div class="code-example">
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        </div>
+
+        <p>Key components:</p>
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code>: Defines this document to be HTML5.</li>
+            <li><code>&lt;html&gt;</code>: The root element of an HTML page.</li>
+            <li><code>&lt;head&gt;</code>: Contains meta-information about the HTML page (like the title shown in the browser tab).</li>
+            <li><code>&lt;body&gt;</code>: Contains the visible page content (headings, paragraphs, images, etc.).</li>
+        </ul>
+
+        <h2>HTML Elements and Tags</h2>
+        <p>An HTML element usually consists of a **start tag**, some **content**, and an **end tag**. For example, the paragraph element is written as <code>&lt;p&gt;Content here.&lt;/p&gt;</code>. Some elements are "empty" and don't need an end tag, like the line break tag <code>&lt;br&gt;</code>.</p>
+        
+        <p>To continue learning the fundamentals, click on the **HTML Basics & Editors** link in the side menu. 👇</p>
+
+        <div class="button-group" style="max-width: 400px; margin-top: 40px;">
+            <a href="#basics" class="green-btn">Continue to HTML Basics</a>
+            <a href="https://www.youtube.com/embed/qz0aGYrrlhU" class="yellow-btn">Watch Video Tutorial</a>
+        </div>
+    </section>
+
+    <section class="video-section">
+      <h2>Full HTML Video Tutorial</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU" title="HTML Full Course - Build a Website Tutorial" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+   <footer class="main-footer">
+        <div class="footer-content">
+   <div class="footer-column footer-brand">
+        <h3>X3School</h3>
+        <p>The world's largest web developer site, offering free and paid courses in programming and technology.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Instagram">📸</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Top Tutorials</h4>
+        <ul>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">SQL</a></li>
+          <li><a href="#">React</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About X3School</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Terms & Privacy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Certification</h4>
+        <ul>
+          <li><a href="#">HTML Certificate</a></li>
+          <li><a href="#">Python Certificate</a></li>
+          <li><a href="#">JavaScript Certificate</a></li>
+          <li><a href="#">All Certifications</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 X3School. All Rights Reserved.</p>
+      <p>Powered by X3 Education Technology.</p>
+    </div>
+  </footer>
+  <script>
+    function toggleSearch() {
+      const searchOverlay = document.getElementById('searchOverlay');
+      searchOverlay.querySelector('input').placeholder = "Search HTML topics..."; 
+      searchOverlay.style.display = (searchOverlay.style.display === 'flex') ? 'none' : 'flex';
+      if (searchOverlay.style.display === 'flex') {
+        searchOverlay.querySelector('input').focus();
+      }
+    }
+    
+    function openFullMenu() {
+        document.getElementById("sideMenu").style.width = "250px"; 
+    }
+    
+    function closeFullMenu() {
+        document.getElementById("sideMenu").style.width = "0"; 
+    }
+  </script>
+</body>
+</html>
