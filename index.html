@@ -1,312 +1,487 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <!-- ✅ Basic SEO Setup -->
-   <meta name="google-site-verification" content="r05cmkjA1lRP0f2DXc1aFLOb7L4iykQDDcW2W7NG1kk" />
+  <meta name="google-site-verification" content="r05cmkjA1lRP0f2DXc1aFLOb7L4iykQDDcW2W7NG1kk" />
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn coding, programming, AI, web development, and general subjects like history, geography, and math — all in one place.">
-  <meta name="keywords" content="HTML, CSS, JavaScript, Python, Web Development, AI, Data Science, Coding School, Learn Coding, Programming Languages, History, Geography, Math">
-  <meta name="author" content="X3School">
-  <title>X3School | Learn Coding and General Subjects</title>
 
-  <!-- ✅ Open Graph Meta Tags -->
-  <meta property="og:title" content="X3School - Learn Coding, Web Development & More">
-  <meta property="og:description" content="Master coding, AI, and general knowledge subjects. Free tutorials, projects, and notes.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://x3school.com/">
-  <meta property="og:image" content="https://x3school.com/images/preview.png">
+  <title>X3School Coding Classes | Learn Python, Web Development & More</title>
 
-  <!-- ✅ Favicon -->
-  <link rel="icon" type="image/png" href="favicon.ico">
-  <link rel="icon" type="image/png" href="/favicon.ico">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="canonical" href="https://www.x3school.example/" />
-  <meta property="og:site_name" content="X3School">
-  <!-- ✅ CSS Styling -->
-  
+  <meta name="description" content="X3Schools helps you become a Software Engineer through practical coding classes in Python, HTML, CSS, JavaScript, and web development. Learn from basics to advanced with real projects.">
+
+  <meta name="keywords" content="X3Schools, coding classes, learn python, web development, HTML CSS JavaScript, programming courses, online coding school, software engineer training">
+
+  <meta name="author" content="X3Schools">
+
+  <meta property="og:title" content="X3Schools Coding Classes | Become a Software Engineer" />
+  <meta property="og:description" content="Join X3School to master coding with hands-on projects in Python, HTML, CSS, and JavaScript. Build real apps and become job-ready!" />
+  <meta property="og:url" content="https://x3schools.onrender.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://x3schools.onrender.com/static/images/x3school-banner.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="X3Schools Coding Classes | Become a Software Engineer" />
+  <meta name="twitter:description" content="Learn coding with X3Schools – Python, Web Development, JavaScript & more with practical projects." />
+  <meta name="twitter:image" content="https://x3school.onrender.com/static/images/x3school-banner.png" />
+
+  <link rel="icon" type="image/png" href="/static/images/favicon.png" />
+
+  <link rel="canonical" href="https://x3schools.onrender.com" />
   <style>
-    * {
+    /* ----------------------------------- */
+    /* Existing Styles (Unchanged)         */
+    /* ----------------------------------- */
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4;
+    }
+    .topic-section {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      color: #282a35;
       box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    body {
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
+    .topic-section h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      font-weight: bold;
     }
 
-    /* 🌟 Fixed Header */
-    header {
+    .topic-section p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .button-group a {
+      display: block;
+      padding: 15px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .button-group a.green-btn { background-color: #04AA6D; color: white; }
+    .button-group a.yellow-btn { background-color: #FFF4A3; color: #282a35; }
+    .button-group a.dark-btn { background-color: #282a35; color: white; }
+    .button-group a.pink-btn { background-color: #FFC0C7; color: #282a35; }
+
+    .button-group a.green-btn:hover { background-color: #059862; }
+    .button-group a.yellow-btn:hover { background-color: #FFE670; }
+    .button-group a.dark-btn:hover { background-color: #1a1c22; }
+    .button-group a.pink-btn:hover { background-color: #FFB0B8; }
+
+    .hero-section {
+      background-color: #282a35;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .hero-section h1 { font-size: 60px; margin-bottom: 20px; font-weight: bold; }
+    .hero-section p { font-size: 20px; margin-bottom: 40px; max-width: 600px; line-height: 1.5; }
+
+    .hero-search {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 25px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .hero-search input {
+      flex-grow: 1;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .hero-search button {
+      background-color: #04AA6D;
+      border: none;
+      padding: 12px 20px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      outline: none;
+    }
+    
+    /* MODIFIED: Ensure top-header is fixed */
+    .top-header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed; /* Fixed position */
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 40px;
+    }
+
+    .brand-name { font-size: 24px; font-weight: bold; text-decoration: none; color: white; }
+
+    .search-overlay {
       position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 60px;
+      background-color: #333;
+      display: none;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1001;
+    }
+
+    .search-input-container { display: flex; width: 100%; align-items: center; }
+    .search-overlay input[type="text"] {
+      flex-grow: 1; padding: 10px; border: none; border-radius: 4px; font-size: 16px; margin-right: 10px;
+    }
+    .search-overlay .close-btn {
+      background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 5px;
+    }
+
+    .header-controls { display: flex; align-items: center; }
+    .search-icon, .auth-buttons button {
+      background: none; border: none; color: white; cursor: pointer; font-size: 16px; padding: 8px 10px; margin-left: 10px;
+    }
+    
+    /* MODIFIED: Ensure sub-header is fixed right below top-header */
+    .sub-header {
+      background-color: #e7e7e7;
+      /* Adjusted margin-top to be 0 since it's now fixed */
+      margin-top: 0; 
+      position: fixed; /* Fixed position */
+      top: 60px; /* Fixed right below the 40px top-header */
+      left: 0; right: 0;
+      z-index: 999;
+      position: fixed; 
+      display: flex; 
+      padding: 0; 
+    }
+
+    .scrollable-menu {
+      white-space: nowrap;
+      overflow-x: auto; 
+      padding-left: 50px; 
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .menu-icon-container {
+      position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      background: linear-gradient(90deg, #0078d7, #00bcd4);
-      color: white;
-      z-index: 1000;
+      height: 100%;
+      width: 50px; 
+      background-color: #e7e7e7; 
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-      flex-wrap: wrap;
+      justify-content: center;
+      z-index: 1000; 
+      border-right: 1px solid #ddd; 
     }
 
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #111;
-    }
-
-    .search-bar {
-      display: flex;
-      align-items: center;
-      background: white;
-      border-radius: 20px;
-      padding: 5px 10px;
-      margin: 8px 0;
-    }
-
-    .search-bar input {
+    .hamburger-icon {
+      background: none;
       border: none;
-      outline: none;
-      padding: 6px 8px;
-      font-size: 0.9rem;
-      border-radius: 20px;
-      width: 160px;
-    }
-
-    .search-bar button {
-      background: #00bcd4;
-      border: none;
-      color: white;
-      border-radius: 50%;
-      width: 28px;
-      height: 28px;
+      color: #333;
+      font-size: 20px;
       cursor: pointer;
+      padding: 5px;
     }
 
-    .auth-buttons a {
-      color: white;
-      margin-left: 10px;
-      padding: 6px 12px;
-      border: 1px solid white;
-      border-radius: 20px;
-      text-decoration: none;
-      transition: all 0.3s;
-      font-size: 0.9rem;
-    }
-
-    .auth-buttons a:hover {
-      background: white;
-      color: #0078d7;
-    }
-
-    /* 🍔 Hamburger Menu */
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-
-    /* 🧭 Scrollable Skill Bar */
-    nav {
-      margin-top: 70px; /* space for fixed header */
-      background: #111;
-      display: flex;
-      overflow-x: auto;
-      white-space: nowrap;
-      padding: 12px 10px;
-      scroll-behavior: smooth;
-    }
-
-    nav a {
+    .menu-item {
       display: inline-block;
-      color: #fff;
-      background: #222;
+      padding: 5px 15px;
       text-decoration: none;
-      padding: 10px 18px;
-      margin-right: 10px;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: background 0.3s, color 0.3s;
+      color: #333;
+      font-size: 14px;
+      transition: background-color 0.3s;
     }
 
-    nav a:hover {
-      background: #00bcd4;
-      color: #111;
+    .menu-item:hover { background-color: #ddd; border-radius: 4px; }
+    
+    /* MODIFIED: Total header height is 40px (top) + ~40px (sub) = ~80px. Setting generous padding. */
+    .main-content { padding-top: 90px; } 
+
+    /* ----------------------------------- */
+    /* MODIFIED SIDE MENU STYLES           */
+    /* ----------------------------------- */
+    .side-menu {
+        height: 100%;
+        width: 0; 
+        position: fixed;
+        z-index: 1002; 
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.2s; /* FASTER TRANSITION: Changed from 0.5s to 0.2s */
+        color: white;
     }
 
-    nav::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    nav::-webkit-scrollbar-thumb {
-      background: #555;
-      border-radius: 10px;
-    }
-
-    /* 🧩 Empty Content Area */
-    section {
-      padding: 80px 20px;
-      text-align: center;
-      color: #777;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-
-    /* 📱 Responsive Design */
-    @media (max-width: 900px) {
-      .nav-links,
-      .search-bar,
-      .auth-buttons {
-        display: none;
-      }
-
-      .menu-toggle {
+    .side-menu-content a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
         display: block;
-      }
+        transition: 0.3s;
+    }
 
-      .nav-links.mobile-active,
-      .search-bar.mobile-active,
-      .auth-buttons.mobile-active {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        background: #0088cc;
-        padding: 10px;
-        flex-wrap: wrap;
-      }
+    .side-menu-content a:hover {
+        color: #f1f1f1;
+        background-color: #333;
+    }
+
+    .side-menu .close-btn-menu {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* 🎥 Video Section */
+    .video-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .video-section h2 {
+      color: #282a35;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .video-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+      border: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- 🌟 Fixed Header -->
-  <header>
-    <div class="logo">X3School</div>
-
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <div class="nav-links">
-      <a href="#">Tutorials</a>
-      <a href="#">References</a>
-      <a href="#">Exercises</a>
-      <a href="#">Certificates</a>
-      <a href="#">For Teachers</a>
-      <a href="#">Get Certified</a>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-input-container">
+      <input type="text" placeholder="Search..." autofocus>
+      <button class="close-btn" onclick="toggleSearch()">×</button>
     </div>
+  </div>
 
-    <div class="search-bar">
-      <input type="text" placeholder="Search...">
-      <button>🔍</button>
-    </div>
-
-    <div class="auth-buttons">
-      <a href="#">Sign In</a>
-      <a href="#">Sign Up</a>
+  <header class="top-header">
+    <a href="#" class="brand-name">x3School</a>
+    <div class="header-controls">
+      <button class="search-icon" onclick="toggleSearch()">🔍</button>
+      <div class="auth-buttons">
+        <button>SIGNUP</button>
+        <button>LOGIN</button>
+      </div>
     </div>
   </header>
 
-  <!-- 🧭 Scrollable Skills -->
-  <nav>
-    <a href="#">HTML</a>
-    <a href="#">CSS</a>
-    <a href="#">JavaScript</a>
-    <a href="#">React.js</a>
-    <a href="#">Python</a>
-    <a href="#">Java</a>
-    <a href="#">C</a>
-    <a href="#">C++</a>
-    <a href="#">C#</a>
-    <a href="#">PHP</a>
-    <a href="#">Kotlin</a>
-    <a href="#">Swift</a>
-    <a href="#">Go</a>
-    <a href="#">Dart</a>
-    <a href="#">Rust</a>
-    <a href="#">MySQL</a>
-    <a href="#">MongoDB</a>
-    <a href="#">Node.js</a>
-    <a href="#">Django</a>
-    <a href="#">Flask</a>
-    <a href="#">Laravel</a>
-    <a href="#">Bootstrap</a>
-    <a href="#">Tailwind CSS</a>
-    <a href="#">UI/UX</a>
-    <a href="#">Data Science</a>
-    <a href="#">Machine Learning</a>
-    <a href="#">Artificial Intelligence</a>
-    <a href="#">Deep Learning</a>
-    <a href="#">TensorFlow</a>
-    <a href="#">Git</a>
-    <a href="#">GitHub</a>
-    <a href="#">AWS</a>
-    <a href="#">Google Cloud</a>
-    <a href="#">Digital Marketing</a>
-    <a href="#">SEO</a>
-    <a href="#">Cyber Security</a>
-    <a href="#">Ethical Hacking</a>
-    <a href="#">Blockchain</a>
-    <a href="#">ChatGPT / OpenAI</a>
-    <a href="#">Android Development</a>
-    <a href="#">iOS Development</a>
-    <a href="#">History</a>
-    <a href="#">Geography</a>
-    <a href="#">Science</a>
-    <a href="#">Mathematics</a>
-    <a href="#">Political Science</a>
-    <a href="#">Economics</a>
-    <a href="#">Hindi</a>
-    <a href="#">English</a>
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn-menu" onclick="closeFullMenu()">×</a>
+    <div class="side-menu-content">
+        <h2>ALL COURSES</h2>
+        <a href="#">HTML Full Course</a>
+        <a href="#">CSS Modern Layouts</a>
+        <a href="#">JavaScript Advanced</a>
+        <a href="#">Python Data Science</a>
+        <a href="#">SQL Database Design</a>
+        <a href="#">PHP Backend</a>
+        <a href="#">C++ Programming</a>
+        <a href="#">Data Structures</a>
+        <a href="#">Machine Learning</a>
+        <a href="#">AI and LLMs</a>
+        <a href="#">React JS</a>
+        <a href="#">Node.js Backend</a>
+        <a href="#">AWS Cloud</a>
+        <a href="#">Cyber Security Basics</a>
+        <a href="#">Angular Framework</a>
+        <a href="#">Vue.js Basics</a>
+        <a href="#">Express.js</a>
+        <a href="#">MongoDB</a>
+        <a href="#">Git & GitHub</a>
+        <a href="#">Docker Essentials</a>
+        <a href="#">Azure Services</a>
+        <a href="#">Algorithms</a>
+        <a href="#">Testing & QA</a>
+        <a href="#">UI/UX Design</a>
+        <a href="#">Sass/Less CSS</a>
+        <a href="#">TypeScript</a>
+        <a href="#">Kotlin Mobile</a>
+        <a href="#">Swift iOS Dev</a>
+        <a href="#">GoLang Basics</a>
+        <a href="#">R for Statistics</a>
+        <a href="#">DevOps Tools</a>
+        <a href="#">GraphQL API</a>
+        <a href="#">Rust Lang</a>
+        <a href="#">Perl Scripting</a>
+        <a href="#">Ruby on Rails</a>
+        <a href="#">C# .NET</a>
+        <a href="#">Web Dev Projects</a>
+        <a href="#">Career Guide</a>
+    </div>
+  </div>
+
+
+  <nav class="sub-header">
+    <div class="menu-icon-container">
+      <button class="hamburger-icon" onclick="openFullMenu()">☰</button> 
+    </div>
+    
+    <div class="scrollable-menu">
+      <a href="#" class="menu-item">HTML</a>
+      <a href="#" class="menu-item">CSS</a>
+      <a href="#" class="menu-item">JavaScript</a>
+      <a href="#" class="menu-item">Python</a>
+      <a href="#" class="menu-item">SQL</a>
+      <a href="#" class="menu-item">PHP</a>
+      <a href="#" class="menu-item">C++</a>
+      <a href="#" class="menu-item">Data Science</a>
+      <a href="#" class="menu-item">Machine Learning</a>
+      <a href="#" class="menu-item">AI</a>
+      <a href="#" class="menu-item">Web Dev</a>
+      <a href="#" class="menu-item">React</a>
+      <a href="#" class="menu-item">Angular</a>
+      <a href="#" class="menu-item">Vue.js</a>
+      <a href="#" class="menu-item">Node.js</a>
+      <a href="#" class="menu-item">Express</a>
+      <a href="#" class="menu-item">MongoDB</a>
+      <a href="#" class="menu-item">Django</a>
+      <a href="#" class="menu-item">Flask</a>
+      <a href="#" class="menu-item">Git</a>
+      <a href="#" class="menu-item">Docker</a>
+      <a href="#" class="menu-item">AWS</a>
+      <a href="#" class="menu-item">Azure</a>
+      <a href="#" class="menu-item">Data Structures</a>
+      <a href="#" class="menu-item">Algorithms</a>
+      <a href="#" class="menu-item">Cyber Security</a>
+      <a href="#" class="menu-item">Testing</a>
+      <a href="#" class="menu-item">UI/UX</a>
+      <a href="#" class="menu-item">Sass</a>
+      <a href="#" class="menu-item">Less</a>
+      <a href="#" class="menu-item">TypeScript</a>
+      <a href="#" class="menu-item">Kotlin</a>
+      <a href="#" class="menu-item">Swift</a>
+      <a href="#" class="menu-item">Go</a>
+      <a href="#" class="menu-item">R</a>
+      <a href="#" class="menu-item">MATLAB</a>
+      <a href="#" class="menu-item">Excel</a>
+      <a href="#" class="menu-item">Big Data</a>
+      <a href="#" class="menu-item">DevOps</a>
+      <a href="#" class="menu-item">API Dev</a>
+      <a href="#" class="menu-item">GraphQL</a>
+      <a href="#" class="menu-item">Rust</a>
+      <a href="#" class="menu-item">Perl</a>
+      <a href="#" class="menu-item">Ruby</a>
+      <a href="#" class="menu-item">C#</a>
+      <a href="#" class="menu-item">Assembly</a>
+      <a href="#" class="menu-item">Networking</a>
+      <a href="#" class="menu-item">Operating Systems</a>
+      <a href="#" class="menu-item">Game Dev</a>
+      <a href="#" class="menu-item">Cloud</a>
+      <a href="#" class="menu-item">Blockchain</a>
+    </div>
   </nav>
 
-  <!-- 🧩 Empty Section for Content -->
-  <section>
-    <h2>Your Content Area</h2>
-    <p>Write your own content here...</p>
-  </section>
+  <main class="main-content">
+    <section class="hero-section">
+      <h1>Learn to <br> Code</h1>
+      <p>With the world's largest web developer site.</p>
+      <div class="hero-search">
+        <input type="text" placeholder="Search our tutorials, e.g. HTML">
+        <button>🔍</button>
+      </div>
+      <a href="#">Not Sure Where To Begin?</a>
+    </section>
 
-  <!-- 📞 Footer -->
-  <footer>
-    © 2025 X3School | Learn Coding & General Subjects | Designed with ❤️ in India
-  </footer>
+    <section class="topic-section">
+      <h1>HTML</h1>
+      <p>The language for building web pages</p>
+      <div class="button-group">
+        <a href="#" class="green-btn">Learn HTML</a>
+        <a href="#" class="yellow-btn">Video Tutorial</a>
+        <a href="#" class="dark-btn">HTML Reference</a>
+        <a href="#" class="pink-btn">Get Certified</a>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <h2>Full HTML Video Tutorial</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU" title="HTML Full Course - Build a Website Tutorial" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
 
   <script>
-    function toggleMenu() {
-      document.querySelector(".nav-links").classList.toggle("mobile-active");
-      document.querySelector(".search-bar").classList.toggle("mobile-active");
-      document.querySelector(".auth-buttons").classList.toggle("mobile-active");
+    function toggleSearch() {
+      const searchOverlay = document.getElementById('searchOverlay');
+      // Change the text based on the language preference
+      searchOverlay.querySelector('input').placeholder = "Search our courses..."; 
+      searchOverlay.style.display = (searchOverlay.style.display === 'flex') ? 'none' : 'flex';
+      if (searchOverlay.style.display === 'flex') {
+        searchOverlay.querySelector('input').focus();
+      }
+    }
+    
+    // JAVASCRIPT FUNCTIONS TO OPEN/CLOSE THE SIDE MENU
+    function openFullMenu() {
+        document.getElementById("sideMenu").style.width = "250px"; // Open the side menu
+    }
+    
+    function closeFullMenu() {
+        document.getElementById("sideMenu").style.width = "0"; // Close the side menu
     }
   </script>
 </body>
-</html>
+                                             </html>
