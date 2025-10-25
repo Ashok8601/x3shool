@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Flask Introduction Notes | Learn Python Flask Framework Step-by-Step</title>
+    <title>Flask Introduction Notes By x3School | Learn Python Flask Framework Step-by-Step</title>
 
     <!-- ✅ SEO Description -->
-    <meta name="description" content="Learn Flask framework step-by-step with complete notes in English. Understand what Flask is, its features, architecture, setup, folder structure, and example code. Perfect guide for beginners.">
+    <meta name="description" content="Learn Flask framework with x3school step-by-step with complete notes in English. Understand what Flask is, its features, architecture, setup, folder structure, and example code. Perfect guide for beginners.">
 
     <!-- ✅ Keywords -->
-    <meta name="keywords" content="Flask, Flask tutorial, Flask framework, Python web development, Flask notes, Flask architecture, Flask features, Flask vs Django, Flask beginner guide, Flask setup, Flask example, Flask project structure, Flask learning, Flask explained, Flask course, Python Flask, Flask introduction, Learn Flask, Flask guide, Flask overview">
+    <meta name="keywords" content="Flask,x3school, Flask tutorial, Flask framework, Python web development, Flask notes, Flask architecture, Flask features, Flask vs Django, Flask beginner guide, Flask setup, Flask example, Flask project structure, Flask learning, Flask explained, Flask course, Python Flask, Flask introduction, Learn Flask, Flask guide, Flask overview">
 
     <!-- ✅ Canonical URL -->
     <link rel="canonical" href="https://x3shool.onrender.com/python/Flask-introduction/">
@@ -53,11 +53,7 @@
         "url": "https://x3shool.onrender.com"
     }
     </script>
-
-    <!-- ✅ Favicon -->
-    <link rel="icon" href="https://x3shool.onrender.com/static/favicon.ico" type="image/x-icon">
-
-  <style>
+          <style>
     body {
       font-family: "Poppins", sans-serif;
       margin: 0;
@@ -160,15 +156,133 @@
       h2 { font-size: 1.2rem; }
     }
   </style>
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="https://x3shool.onrender.com/static/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css">
+
 </head>
 <body>
 
-  <header>
-    <h1>🧠 Flask Introduction (Topic Wise Notes)</h1>
-    <p>All key Flask concepts explained in simple English for beginners</p>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-input-container">
+      <input type="text" placeholder="Search our courses..." autofocus>
+      <button class="close-btn" onclick="toggleSearch()">×</button>
+    </div>
+  </div>
+
+  <header class="top-header">
+    <a href="/" class="brand-name">x3School</a>
+    <div class="header-controls">
+      <button class="search-icon" onclick="toggleSearch()">🔍</button>
+      <div class="auth-buttons">
+        <button>SIGNUP</button>
+        <button>LOGIN</button>
+      </div>
+    </div>
   </header>
 
-  <main>
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn-menu" onclick="closeFullMenu()">×</a>
+    <div class="side-menu-content">
+        <h2>Flask Topics (50+)</h2>
+       <a href="https://x3shool.onrender.com/python/Flask-introduction/" class="menu-item">Flask Introduction</a>
+      <a href="#" class="menu-item">Flask Installation</a>
+      <a href="#" class="menu-item">Flask Routes</a>
+      <a href="#" class="menu-item">Flask Templates</a>
+      <a href="#" class="menu-item">Flask Forms</a>
+      <a href="#" class="menu-item">Flask Database</a>
+      <a href="#" class="menu-item">Flask Auth</a>
+      <a href="#" class="menu-item">Flask Blueprints</a>
+      <a href="#" class="menu-item">Flask APIs</a>
+      <a href="#" class="menu-item">Flask Sessions</a>
+      <a href="#" class="menu-item">Flask Error Handling</a>
+      <a href="#" class="menu-item">Flask Deployment</a>
+      <a href="#" class="menu-item">Flask Extensions</a>
+      <a href="#" class="menu-item">Flask Testing</a>
+      <a href="#" class="menu-item">Flask Security</a>
+      <a href="#" class="menu-item">Flask File Uploads</a>
+      <a href="#" class="menu-item">Flask Middleware</a>
+      <a href="#" class="menu-item">Flask Signals</a>
+      <a href="#" class="menu-item">Flask Logging</a>
+      <a href="#" class="menu-item">Flask Advanced Tips</a>
+        <br>
+        <br>
+    </div>
+  </div>
+
+
+  <nav class="sub-header">
+    <div class="menu-icon-container">
+      <button class="hamburger-icon" onclick="openFullMenu()">☰</button> 
+    </div>
+    
+    <div class="scrollable-menu">
+      <a href="https://x3shool.onrender.com/html/html-introduction/" class="menu-item">HTML</a>
+      <a href="#" class="menu-item">CSS</a>
+      <a href="#" class="menu-item">JavaScript</a>
+      <a href="#" class="menu-item">Python</a>
+      <a href="#" class="menu-item">SQL</a>
+      <a href="#" class="menu-item">PHP</a>
+      <a href="#" class="menu-item">C++</a>
+      <a href="#" class="menu-item">Data Science</a>
+      <a href="#" class="menu-item">Machine Learning</a>
+      <a href="#" class="menu-item">AI</a>
+      <a href="#" class="menu-item">Web Dev</a>
+      <a href="#" class="menu-item">React</a>
+      <a href="#" class="menu-item">Angular</a>
+      <a href="#" class="menu-item">Vue.js</a>
+      <a href="#" class="menu-item">Node.js</a>
+      <a href="#" class="menu-item">Express</a>
+      <a href="#" class="menu-item">MongoDB</a>
+      <a href="#" class="menu-item">Django</a>
+      <a href="https://x3shool.onrender.com/python/Flask-introduction/" class="menu-item">Flask</a>
+      <a href="#" class="menu-item">Git</a>
+      <a href="#" class="menu-item">Docker</a>
+      <a href="#" class="menu-item">AWS</a>
+      <a href="#" class="menu-item">Azure</a>
+      <a href="#" class="menu-item">Data Structures</a>
+      <a href="#" class="menu-item">Algorithms</a>
+      <a href="#" class="menu-item">Cyber Security</a>
+      <a href="#" class="menu-item">Testing</a>
+      <a href="#" class="menu-item">UI/UX</a>
+      <a href="#" class="menu-item">Sass</a>
+      <a href="#" class="menu-item">Less</a>
+      <a href="#" class="menu-item">TypeScript</a>
+      <a href="#" class="menu-item">Kotlin</a>
+      <a href="#" class="menu-item">Swift</a>
+      <a href="#" class="menu-item">Go</a>
+      <a href="#" class="menu-item">R</a>
+      <a href="#" class="menu-item">MATLAB</a>
+      <a href="#" class="menu-item">Excel</a>
+      <a href="#" class="menu-item">Big Data</a>
+      <a href="#" class="menu-item">DevOps</a>
+      <a href="#" class="menu-item">API Dev</a>
+      <a href="#" class="menu-item">GraphQL</a>
+      <a href="#" class="menu-item">Rust</a>
+      <a href="#" class="menu-item">Perl</a>
+      <a href="#" class="menu-item">Ruby</a>
+      <a href="#" class="menu-item">C#</a>
+      <a href="#" class="menu-item">Assembly</a>
+      <a href="#" class="menu-item">Networking</a>
+      <a href="#" class="menu-item">Operating Systems</a>
+      <a href="#" class="menu-item">Game Dev</a>
+      <a href="#" class="menu-item">Cloud</a>
+      <a href="#" class="menu-item">Blockchain</a>
+    </div>
+  </nav>
+
+<br />
+
+  <main class="main-content">
+      <br />
+       <h1>🧠 Flask Introduction (Topic Wise Notes)</h1>
+    <p>All key Flask concepts explained in simple English for beginners</p>
+    <section class="content-area">
+      
+      <div class="button-bar">
+    <a href="https://www.youtube.com/embed/xFtelo_V1ME" class="yellow-btn" target="_blank">🎥 Watch Video</a>
+    <a href="#elements" class="green-btn">Next → Topics</a>
+  </div>
 
     <!-- ✅ SEO Optimized Image Section -->
     <section>
@@ -340,10 +454,74 @@ if __name__ == '__main__':
       Once you master Flask, learning Django becomes much easier.</p>
     </section>
   </main>
+   <footer class="main-footer">
+      <div class="footer-content">
+      <div class="footer-column footer-brand">
+        <h3>X3School</h3>
+        <p>The world's largest web developer site, offering free and paid courses in programming and technology.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Instagram">📸</a>
+        </div>
+      </div>
 
-  <footer>
-    © 2025 Flask Notes | Created by Ashok Kumar Yadav
+      <div class="footer-column">
+        <h4>Top Tutorials</h4>
+        <ul>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">SQL</a></li>
+          <li><a href="#">React</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About X3School</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Terms & Privacy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Certification</h4>
+        <ul>
+          <li><a href="#">HTML Certificate</a></li>
+          <li><a href="#">Python Certificate</a></li>
+          <li><a href="#">JavaScript Certificate</a></li>
+          <li><a href="#">All Certifications</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 X3School. All Rights Reserved.</p>
+      <p>Powered by X3 Education Technology.</p>
+    </div>
   </footer>
-
+  <script>
+    function toggleSearch() {
+      const searchOverlay = document.getElementById('searchOverlay');
+      searchOverlay.querySelector('input').placeholder = "Search HTML topics..."; 
+      searchOverlay.style.display = (searchOverlay.style.display === 'flex') ? 'none' : 'flex';
+      if (searchOverlay.style.display === 'flex') {
+        searchOverlay.querySelector('input').focus();
+      }
+    }
+    
+    function openFullMenu() {
+        document.getElementById("sideMenu").style.width = "250px"; 
+    }
+    
+    function closeFullMenu() {
+        document.getElementById("sideMenu").style.width = "0"; 
+    }
+  </script>
 </body>
-</html>
