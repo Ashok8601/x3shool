@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ✅ Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flask Introduction Notes | Learn Python Flask Framework Step-by-Step</title>
+
+    <!-- ✅ SEO Description -->
+    <meta name="description" content="Learn Flask framework step-by-step with complete notes in English. Understand what Flask is, its features, architecture, setup, folder structure, and example code. Perfect guide for beginners.">
+
+    <!-- ✅ Keywords -->
+    <meta name="keywords" content="Flask, Flask tutorial, Flask framework, Python web development, Flask notes, Flask architecture, Flask features, Flask vs Django, Flask beginner guide, Flask setup, Flask example, Flask project structure, Flask learning, Flask explained, Flask course, Python Flask, Flask introduction, Learn Flask, Flask guide, Flask overview">
+
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://x3shool.onrender.com">
+
+    <!-- ✅ Open Graph (Facebook & LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Flask Introduction Notes | Learn Python Flask Framework">
+    <meta property="og:description" content="Step-by-step Flask tutorial covering What is Flask, Why use Flask, Features, Architecture, and Example. Best Flask notes for beginners.">
+    <meta property="og:url" content="https://x3shool.onrender.com">
+    <meta property="og:site_name" content="X3Shool">
+    <meta property="og:image" content="https://x3shool.onrender.com/static/flask-cover.jpg">
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flask Introduction Notes | Learn Flask Step-by-Step">
+    <meta name="twitter:description" content="Beginner-friendly Flask notes including examples, structure, and features. Learn Flask for web development.">
+    <meta name="twitter:image" content="https://x3shool.onrender.com/static/flask-cover.jpg">
+
+    <!-- ✅ Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Flask Introduction Notes | Learn Python Flask Framework",
+        "author": {
+            "@type": "Person",
+            "name": "X3Shool"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "X3Shool",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://x3shool.onrender.com/static/logo.png"
+            }
+        },
+        "description": "Complete Flask tutorial notes in English. Learn Flask from basics to advanced — What is Flask, Why Flask, features, architecture, and example projects.",
+        "url": "https://x3shool.onrender.com"
+    }
+    </script>
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="https://x3shool.onrender.com/static/favicon.ico" type="image/x-icon">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #fff;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 35px 15px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      color: #00ffc6;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.08);
+      margin-bottom: 20px;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    section:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      color: #00ffc6;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    pre {
+      background: rgba(0,0,0,0.5);
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    code {
+      background: rgba(0,0,0,0.4);
+      padding: 3px 6px;
+      border-radius: 5px;
+      color: #00ffc6;
+      font-family: monospace;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: rgba(255,255,255,0.15);
+      color: #00ffc6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.7rem; }
+      section { padding: 18px; }
+      h2 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🧠 Flask Introduction (Topic Wise Notes)</h1>
+    <p>All key Flask concepts explained in simple English for beginners</p>
+  </header>
+
+  <main>
+
+    <!-- ✅ SEO Optimized Image Section -->
+    <section>
+      <h2>🖼 Bonus Visual: Flask Architecture</h2>
+      <p>Here’s an extra visual guide to help you understand Flask structure and flow better.</p>
+      <figure style="max-width:800px; margin:auto;">
+          <img 
+              src="https://x3shool.onrender.com/static/flask-architecture.png" 
+              alt="Flask Architecture Diagram – bonus visual guide for understanding Flask routes, templates, and database" 
+              style="width:100%; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.2);" 
+              loading="lazy"
+          >
+          <figcaption style="color:#888; margin-top:8px;">Bonus visual guide: Flask Architecture Overview</figcaption>
+      </figure>
+    </section>
+
+    <!-- ✅ Original Content Sections Start -->
+    <section>
+      <h2>1️⃣ What is Flask?</h2>
+      <p>Flask is a Python-based micro web framework. The word “micro” means Flask provides only the essential tools — and you can add extra features like databases, authentication, etc. as needed. It’s lightweight, flexible, and simple to use.</p>
+      <p><b>✅ Flask = Python + Web Development</b></p>
+    </section>
+
+    <section>
+      <h2>2️⃣ Why Flask?</h2>
+      <p>Flask is one of the best frameworks for beginners because:</p>
+      <ul>
+        <li>It has a clean and simple syntax</li>
+        <li>Very easy to set up</li>
+        <li>Supports rapid development</li>
+        <li>Allows adding features via extensions</li>
+        <li>Includes a built-in debugger and server</li>
+      </ul>
+      <p>🔥 <b>Example:</b> If you want to create a small website, login/signup system, or API — Flask is the best option.</p>
+    </section>
+
+    <section>
+      <h2>3️⃣ Features of Flask</h2>
+      <ul>
+        <li>Lightweight Framework – Minimal code required</li>
+        <li>Built-in Server & Debugger – Easy development</li>
+        <li>Jinja2 Template Engine – For HTML + Python integration</li>
+        <li>RESTful Request Dispatching – Ideal for APIs</li>
+        <li>Modular Design – Easy to manage and extend</li>
+        <li>Supports databases like SQLite, MySQL, PostgreSQL</li>
+        <li>Extensions available – Flask-Mail, Flask-Login, Flask-SQLAlchemy, etc.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4️⃣ Flask vs Django</h2>
+      <table>
+        <tr><th>Feature</th><th>Flask</th><th>Django</th></tr>
+        <tr><td>Type</td><td>Micro Framework</td><td>Full Stack Framework</td></tr>
+        <tr><td>Flexibility</td><td>More Flexible</td><td>More Structured</td></tr>
+        <tr><td>Learning Curve</td><td>Easy</td><td>Moderate</td></tr>
+        <tr><td>Built-in Features</td><td>Minimal</td><td>Many (ORM, Auth, Admin)</td></tr>
+        <tr><td>Use Case</td><td>Small/Medium Apps, APIs</td><td>Large-scale Applications</td></tr>
+      </table>
+      <p><b>🧩 Flask</b> gives you more control and customization freedom.</p>
+    </section>
+
+    <section>
+      <h2>5️⃣ Flask Architecture</h2>
+      <p>Flask app consists of several main parts:</p>
+      <ul>
+        <li><b>Flask Object (App)</b> – Creates the main application</li>
+        <li><b>Routes</b> – Define and handle URLs</li>
+        <li><b>Templates</b> – HTML frontend files</li>
+        <li><b>Static Folder</b> – Stores CSS, JS, and image files</li>
+        <li><b>Database Connection</b> – Stores data (optional)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6️⃣ Basic Flask Application Example</h2>
+      <pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Welcome to Flask!"
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+      <p>🔹 <code>Flask(__name__)</code> → Initializes the app<br>
+      🔹 <code>@app.route('/') </code> → Defines the route<br>
+      🔹 <code>app.run(debug=True)</code> → Starts the development server</p>
+      <p><b>Output:</b> Visit <code>http://127.0.0.1:5000/</code> → “Welcome to Flask!”</p>
+    </section>
+
+    <section>
+      <h2>7️⃣ Flask Folder Structure</h2>
+      <pre><code>project/
+│
+├── app.py
+├── templates/
+│   └── index.html
+├── static/
+│   ├── style.css
+│   └── script.js
+└── database.db</code></pre>
+    </section>
+
+    <section>
+      <h2>8️⃣ Flask Common Commands</h2>
+      <table>
+        <tr><th>Command</th><th>Description</th></tr>
+        <tr><td>pip install flask</td><td>Install Flask</td></tr>
+        <tr><td>flask run</td><td>Run Flask app</td></tr>
+        <tr><td>app.run(debug=True)</td><td>Run with debugging mode</td></tr>
+        <tr><td>@app.route()</td><td>Define a route</td></tr>
+        <tr><td>render_template('index.html')</td><td>Load an HTML page</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>9️⃣ Flask Applications (Use Cases)</h2>
+      <ul>
+        <li>Login/Signup systems</li>
+        <li>Portfolio websites</li>
+        <li>Blogging platforms</li>
+        <li>REST APIs</li>
+        <li>Dashboards</li>
+        <li>E-commerce backends</li>
+        <li>Machine Learning model deployment</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔟 Flask Advantages & Disadvantages</h2>
+      <p><b>✅ Advantages:</b></p>
+      <ul>
+        <li>Easy to learn and implement</li>
+        <li>Flexible and customizable</li>
+        <li>Perfect for small to medium projects</li>
+        <li>Active community and documentation</li>
+      </ul>
+
+      <p><b>❌ Disadvantages:</b></p>
+      <ul>
+        <li>Not suitable for large enterprise apps</li>
+        <li>Some setup needs to be done manually</li>
+        <li>No built-in ORM (optional via SQLAlchemy)</li>
+      </ul>
+    </section>
+
+    <!-- ✅ SEO Optimized Video Section -->
+    <section>
+      <h2>🎥 MS Excel Part-1 | Excel Tutorial for Beginners</h2>
+      <p>Watch this bonus video for extra learning in Hindi-English.</p>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.2); margin-top:10px;">
+          <iframe 
+              src="https://www.youtube.com/embed/8lWD1TEazsc" 
+              title="MS Excel Part-1 | Excel Tutorial for Beginners"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="position:absolute; top:0; left:0; width:100%; height:100%;">
+          </iframe>
+      </div>
+    </section>
+
+    <section>
+      <h2>💬 Conclusion</h2>
+      <p>Flask is a powerful, lightweight, and beginner-friendly Python web framework.  
+      If you want to start web development using Python, Flask is the perfect starting point.  
+      Once you master Flask, learning Django becomes much easier.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Flask Notes | Created by Ashok Kumar Yadav
+  </footer>
+
+</body>
+</html>
