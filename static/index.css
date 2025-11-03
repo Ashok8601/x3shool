@@ -1,0 +1,158 @@
+        .carousel-container {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: scroll; 
+            position: relative;
+            scroll-snap-type: x mandatory; 
+            -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
+        }
+
+        .card-wrapper {
+            display: flex;
+            width: fit-content; 
+        }
+
+        /* --- Card Styling --- */
+        .language-card {
+            flex-shrink: 0; 
+            width: var(--card-width); 
+            margin: 0 20px; 
+            padding: 30px 20px 40px;
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            scroll-snap-align: center; 
+            position: relative; /* For border animation */
+            overflow: hidden; /* Ensure border animation stays within bounds */
+        }
+        
+        /* First and Last card centering fix */
+        .language-card:first-child {
+            margin-left: calc(50vw - (var(--card-width) / 2));
+        }
+
+        .language-card:last-child {
+            margin-right: calc(50vw - (var(--card-width) / 2));
+        }
+
+        /* --- Gradient Text for Title --- */
+        .card-title {
+            font-size: 3.5rem; 
+            font-weight: 900;
+            margin-bottom: 8px;
+            letter-spacing: -2px;
+            
+            /* Gradient Text */
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .card-desc {
+            font-size: 1.125rem;
+            color: #b0b0d0; /* Lighter grey for description */
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        /* --- Card Text Link Wrapper --- */
+        .card-text-link {
+            display: block; /* Make the whole area clickable */
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit color from parent */
+            margin-bottom: 20px; /* Space between text and buttons */
+        }
+
+        /* --- Button Styling --- */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px 20px;
+            margin: 12px 0;
+            border-radius: 50px;
+            font-weight: 700;
+            color: var(--btn-dark); /* Default button text color */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none; /* Remove underline for buttons */
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-green { background-color: var(--btn-green); color: white; }
+        .btn-yellow { background-color: var(--btn-yellow); color: var(--btn-dark); }
+        .btn-dark { background-color: var(--btn-dark); color: white; }
+        .btn-pink { background-color: var(--btn-pink); color: white; }
+
+        /* --- Border Animation for Cards --- */
+        .border-animation-wrapper {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: inherit; /* Inherit border-radius from card */
+            overflow: hidden; /* Keep lines inside */
+            pointer-events: none; /* Don't interfere with clicks */
+        }
+
+        .border-animation-wrapper::before,
+        .border-animation-wrapper::after {
+            content: '';
+            position: absolute;
+            background: linear-gradient(to right, var(--border-blue), var(--border-pink));
+            width: 200%; /* Make them large enough to cover corners */
+            height: 200%;
+            transform-origin: center center;
+            opacity: 0.6;
+            animation: rotateBorder 8s linear infinite; /* Adjust speed as needed */
+            filter: blur(2px); /* Soften the lines */
+        }
+
+        .border-animation-wrapper::before {
+            background: linear-gradient(to right, var(--border-blue), var(--border-pink));
+            animation-delay: 0s;
+        }
+
+        .border-animation-wrapper::after {
+            background: linear-gradient(to left, var(--border-pink), var(--border-blue)); /* Reverse gradient */
+            animation-delay: -4s; /* Start half-way through the animation cycle */
+        }
+
+        @keyframes rotateBorder {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Masking to create the border effect */
+        .border-animation-wrapper {
+            mask: 
+                linear-gradient(#fff 0 0) content-box, /* inner white space */
+                linear-gradient(#fff 0 0); /* outer white space */
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            
+            mask-composite: exclude;
+            -webkit-mask-composite: exclude;
+            
+            /* Add a visible border for contrast */
+            border: 1px solid rgba(255, 255, 255, 0.08); /* subtle white border */
+        }
+
+
+        /* Media Query for smaller screens */
+        @media (max-width: 640px) {
+            :root {
+                 --card-width: 90vw; 
+            }
+             .language-card {
+                margin: 0 10px;
+             }
+             .card-title {
+                 font-size: 2.8rem;
+             }
+                                                     }
