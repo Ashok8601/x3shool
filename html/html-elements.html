@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Elements क्या हैं? संरचना, प्रकार (Block/Inline) और उदाहरण - X3School</title>
+
+    <meta name="description" content="HTML Elements की पूरी जानकारी: Anatomy of Tags, Attributes, Block vs. Inline Elements, और Void Elements को उदाहरणों के साथ सीखें। टॉप HTML इंटरव्यू प्रश्न भी शामिल हैं। X3School पर पढ़ें।">
+
+    <meta name="keywords" content="HTML Elements, HTML Tag, HTML Structure, ब्लॉक और इनलाइन एलिमेंट्स, HTML एट्रीब्यूट्स, HTML Void Elements, HTML Anatomy, X3School HTML, HTML Element definition">
+    
+    <meta name="author" content="X3School">
+
+    <link rel="canonical" href="https://x3shool.onrender.com/html-elements/" />
+    
+    <meta property="og:title" content="HTML Elements: Structure and Types (Full Guide) - X3School" />
+    <meta property="og:description" content="HTML Tags और Elements को गहराई से समझें। Block, Inline, और Attributes पर विस्तृत ट्यूटोरियल। अब X3School पर उपलब्ध।" />
+    <meta property="og:url" content="https://x3schools.onrender.com/html-elements-guide/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://x3schools.onrender.com/static/images/x3school-html-elements-banner.png" /> 
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HTML Elements Guide | Block vs. Inline - X3School" />
+    <meta name="twitter:description" content="HTML Elements, Tags और Attributes पर सबसे आसान गाइड। इंटरव्यू प्रश्नों के साथ।" />
+    <meta name="twitter:image" content="https://x3school.onrender.com/static/images/x3school-html-elements-banner.png" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="x3shool.onrender.com/static/index.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://x3schools.onrender.com/html-elements-guide/"
+      },
+      "headline": "HTML Elements क्या हैं? संरचना, प्रकार (Block/Inline) और उदाहरण",
+      "image": [
+        "https://x3schools.onrender.com/static/images/x3school-html-elements-banner.png"
+      ],
+      "datePublished": "2024-11-03T10:00:00+05:30",
+      "dateModified": "2024-11-03T10:00:00+05:30",
+      "author": {
+        "@type": "Organization",
+        "name": "X3School"
+      },
+      "publisher": {
+        "@type": "EducationalOrganization",
+        "name": "X3School Coding Classes",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://x3schools.onrender.com/static/images/x3school-logo-square.png"
+        }
+      },
+      "description": "HTML Elements, Tags, Attributes, और Block vs. Inline Element types पर एक विस्तृत गाइड, कोडिंग उदाहरणों के साथ।"
+    }
+    </script>
+    
+    <meta name="google-site-verification" content="r05cmkjA1lRP0f2DXc1aFLOb7L4iykQDDcW2W7NG1kk" />
+
+</head>
+<body>
+
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-input-container">
+      <input type="text" placeholder="Search..." autofocus>
+      <button class="close-btn" onclick="toggleSearch()">×</button>
+    </div>
+  </div>
+
+  <header class="top-header">
+    <a href="#" class="brand-name">x3School</a>
+    <div class="header-controls">
+      <button class="search-icon" onclick="toggleSearch()">🔍</button>
+      <div class="auth-buttons">
+        <button>SIGNUP</button>
+        <button>LOGIN</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn-menu" onclick="closeFullMenu()">×</a>
+    <div class="side-menu-content">
+        <h2>ALL COURSES</h2>
+        <a href="html-introduction/">HTML Full Course</a>
+        <a href="#">CSS Modern Layouts</a>
+        <a href="#">JavaScript Advanced</a>
+        <a href="#">Python Data Science</a>
+        <a href="#">SQL Database Design</a>
+        <a href="#">PHP Backend</a>
+        <a href="#">C++ Programming</a>
+        <a href="#">Data Structures</a>
+        <a href="#">Machine Learning</a>
+        <a href="#">AI and LLMs</a>
+        <a href="#">React JS</a>
+        <a href="#">Node.js Backend</a>
+        <a href="#">AWS Cloud</a>
+        <a href="#">Cyber Security Basics</a>
+        <a href="#">Angular Framework</a>
+        <a href="#">Vue.js Basics</a>
+        <a href="#">Express.js</a>
+        <a href="#">MongoDB</a>
+        <a href="#">Git & GitHub</a>
+        <a href="#">Docker Essentials</a>
+        <a href="#">Azure Services</a>
+        <a href="#">Algorithms</a>
+        <a href="#">Testing & QA</a>
+        <a href="#">UI/UX Design</a>
+        <a href="#">Sass/Less CSS</a>
+        <a href="#">TypeScript</a>
+        <a href="#">Kotlin Mobile</a>
+        <a href="#">Swift iOS Dev</a>
+        <a href="#">GoLang Basics</a>
+        <a href="#">R for Statistics</a>
+        <a href="#">DevOps Tools</a>
+        <a href="#">GraphQL API</a>
+        <a href="#">Rust Lang</a>
+        <a href="#">Perl Scripting</a>
+        <a href="#">Ruby on Rails</a>
+        <a href="#">C# .NET</a>
+        <a href="#">Web Dev Projects</a>
+        <a href="#">Career Guide</a>
+    </div>
+  </div>
+
+
+  <nav class="sub-header">
+    <div class="menu-icon-container">
+      <button class="hamburger-icon" onclick="openFullMenu()">☰</button> 
+    </div>
+    
+    <div class="scrollable-menu">
+      <a href="html-introduction/" class="menu-item">HTML</a>
+      <a href="#" class="menu-item">CSS</a>
+      <a href="#" class="menu-item">JavaScript</a>
+      <a href="#" class="menu-item">Python</a>
+      <a href="#" class="menu-item">SQL</a>
+      <a href="#" class="menu-item">PHP</a>
+      <a href="#" class="menu-item">C++</a>
+      <a href="#" class="menu-item">Data Science</a>
+      <a href="#" class="menu-item">Machine Learning</a>
+      <a href="#" class="menu-item">AI</a>
+      <a href="#" class="menu-item">Web Dev</a>
+      <a href="#" class="menu-item">React</a>
+      <a href="#" class="menu-item">Angular</a>
+      <a href="#" class="menu-item">Vue.js</a>
+      <a href="#" class="menu-item">Node.js</a>
+      <a href="#" class="menu-item">Express</a>
+      <a href="#" class="menu-item">MongoDB</a>
+      <a href="#" class="menu-item">Django</a>
+      <a href="#" class="menu-item">Flask</a>
+      <a href="#" class="menu-item">Git</a>
+      <a href="#" class="menu-item">Docker</a>
+      <a href="#" class="menu-item">AWS</a>
+      <a href="#" class="menu-item">Azure</a>
+      <a href="#" class="menu-item">Data Structures</a>
+      <a href="#" class="menu-item">Algorithms</a>
+      <a href="#" class="menu-item">Cyber Security</a>
+      <a href="#" class="menu-item">Testing</a>
+      <a href="#" class="menu-item">UI/UX</a>
+      <a href="#" class="menu-item">Sass</a>
+      <a href="#" class="menu-item">Less</a>
+      <a href="#" class="menu-item">TypeScript</a>
+      <a href="#" class="menu-item">Kotlin</a>
+      <a href="#" class="menu-item">Swift</a>
+      <a href="#" class="menu-item">Go</a>
+      <a href="#" class="menu-item">R</a>
+      <a href="#" class="menu-item">MATLAB</a>
+      <a href="#" class="menu-item">Excel</a>
+      <a href="#" class="menu-item">Big Data</a>
+      <a href="#" class="menu-item">DevOps</a>
+      <a href="#" class="menu-item">API Dev</a>
+      <a href="#" class="menu-item">GraphQL</a>
+      <a href="#" class="menu-item">Rust</a>
+      <a href="#" class="menu-item">Perl</a>
+      <a href="#" class="menu-item">Ruby</a>
+      <a href="#" class="menu-item">C#</a>
+      <a href="#" class="menu-item">Assembly</a>
+      <a href="#" class="menu-item">Networking</a>
+      <a href="#" class="menu-item">Operating Systems</a>
+      <a href="#" class="menu-item">Game Dev</a>
+      <a href="#" class="menu-item">Cloud</a>
+      <a href="#" class="menu-item">Blockchain</a>
+    </div>
+  </nav>
+
+
+    <main class="main-content">
+        <div class="content-area">
+            <h1>📖 HTML Elements: Structure and Types</h1>
+            
+            <p>HTML (HyperText Markup Language) is the backbone of any web page. An **HTML Element** defines a piece of content on the webpage. It is the most fundamental building block, essential for anyone starting their coding journey with X3School.</p>
+            
+            <h2>Anatomy of an HTML Element</h2>
+            <p>An HTML element typically consists of three parts: an **Opening Tag**, the **Content**, and a **Closing Tag**.</p>
+            
+            <h3>Structure Example</h3>
+            <div class="code-example">
+                <code>
+                    &lt;p&gt;This is the content of the element.&lt;/p&gt;
+                </code>
+            </div>
+            <ul>
+                <li><strong>Opening Tag:</strong> <code>&lt;p&gt;</code> - Marks where the element begins.</li>
+                <li><strong>Content:</strong> <code>This is the content of the element.</code> - The information displayed to the user.</li>
+                <li><strong>Closing Tag:</strong> <code>&lt;/p&gt;</code> - Includes a forward slash (<code>/</code>) and marks where the element ends.</li>
+            </ul>
+
+            <h2>Attributes</h2>
+            <p>Attributes provide additional information about the element. They are always defined inside the **Opening Tag**, typically in name/value pairs (<code>name="value"</code>).</p>
+
+            <h3>Attribute Example (Using A Tag)</h3>
+            <p>The <code>&lt;a&gt;</code> tag uses the <code>href</code> attribute to define the link destination.</p>
+            <div class="code-example">
+                <code>
+                    &lt;a href="https://x3school.in" target="_blank"&gt;Our Website Link&lt;/a&gt;
+                </code>
+            </div>
+            <ul>
+                <li><strong>Tag:</strong> <code>&lt;a&gt;</code> (Anchor Tag)</li>
+                <li><strong>Attribute 1:</strong> <code>href</code> (Specifies the URL for the link)</li>
+                <li><strong>Attribute 2:</strong> <code>target="_blank"</code> (Instructs the browser to open the link in a new tab)</li>
+            </ul>
+            
+            <h2>Block vs. Inline Elements</h2>
+            <p>HTML elements are broadly categorized into two display categories based on how they affect the layout of the document.</p>
+            
+            <h3>1. Block-Level Elements</h3>
+            <ul>
+                <li>They always start on a new line.</li>
+                <li>They take up the full width available, pushing elements after them down.</li>
+                <li>Examples: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;form&gt;</code>.</li>
+            </ul>
+
+            <h3>2. Inline Elements</h3>
+            <ul>
+                <li>They do not start on a new line.</li>
+                <li>They only take up as much width as necessary for their content.</li>
+                <li>Examples: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code> (anchor), <code>&lt;img&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>.</li>
+            </ul>
+            
+            <h2>Code Example: Block and Inline</h2>
+            <div class="code-example">
+                <pre>
+&lt;!-- Block Elements --&gt;
+&lt;div style="background: #FFF4A3;"&gt;First Div (Takes full width)&lt;/div&gt;
+&lt;p style="background: #FFC0C7;"&gt;A Paragraph (Also takes full width)&lt;/p&gt;
+
+&lt;!-- Inline Elements --&gt;
+&lt;span style="background: lime;"&gt;First Span&lt;/span&gt;
+&lt;a style="background: cyan;" href="#"&gt;An Inline Link&lt;/a&gt;
+&lt;span style="background: lightblue;"&gt;Second Span&lt;/span&gt;
+                </pre>
+            </div>
+            
+            <h2>Practice Your Code!</h2>
+            <div class="button-bar">
+                <a href="#" class="green-btn">Try it in the Code Editor</a>
+            </div>
+
+            <div class="interview-questions">
+                <h2>Top HTML Element Interview Questions</h2>
+                <ol>
+                    <li>What is the difference between an HTML Element and an HTML Tag? 
+                      <span>Answer: Tags are the symbols (&lt;p&gt;, &lt;/p&gt;) used to create the element, while the Element is the whole unit including the opening tag, content, and closing tag.</span></li>
+                    <li>What are Empty Elements (or Void Elements)? Give examples.
+                      <span>Answer: Elements that do not have a closing tag and cannot contain content. Examples: &lt;img&gt;, &lt;br&gt;, &lt;hr&gt;.</span></li>
+                    <li>What is the main difference between <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>?
+                      <span>Answer: &lt;div&gt; is a block-level element used for major structural groupings, and &lt;span&gt; is an inline element used for minor content groupings.</span></li>
+                    <li>What are Global Attributes?
+                      <span>Answer: Attributes that can be applied to ALL HTML elements (e.g., class, id, style, title, data-*).</span></li>
+                </ol>
+            </div>
+        </div>
+    </main>
+
+    
+
+   <footer class="main-footer">
+      <div class="footer-content">
+      <div class="footer-column footer-brand">
+        <h3>X3School</h3>
+        <p>The world's largest web developer site, offering free and paid courses in programming and technology.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Instagram">📸</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Top Tutorials</h4>
+        <ul>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">SQL</a></li>
+          <li><a href="#">React</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About X3School</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Terms & Privacy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Certification</h4>
+        <ul>
+          <li><a href="#">HTML Certificate</a></li>
+          <li><a href="#">Python Certificate</a></li>
+          <li><a href="#">JavaScript Certificate</a></li>
+          <li><a href="#">All Certifications</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 X3School. All Rights Reserved.</p>
+      <p>Powered by X3 Education Technology.</p>
+    </div>
+  </footer>
+  <script src="home.js">../static/index.js</script>
+</body>
+                            ""                 </html>
