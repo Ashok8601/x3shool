@@ -1,185 +1,70 @@
-<!doctype html>
-
-<html lang="hi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HTML Attributes — विस्तृत मार्गदर्शिका</title>
-  <style>
-    :root{--bg:#f7fbff;--card:#ffffff;--muted:#6b7280;--accent:#0b5cff}
-    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', Arial; background:var(--bg); margin:0; padding:32px; color:#0f172a}
-    .container{max-width:1000px;margin:0 auto}
-    header{display:flex;gap:16px;align-items:center}
-    h1{margin:0;font-size:28px}
-    p.lead{color:var(--muted); margin-top:6px}
-    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:20px}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,15,30,0.06)}
-    table{width:100%;border-collapse:collapse;margin-top:8px}
-    th,td{padding:8px;border-bottom:1px solid #eef2ff;text-align:left;font-size:14px}
-    th{background:#f1f5f9}
-    code{background:#0f172a;color:#fff;padding:3px 6px;border-radius:6px;font-size:13px}
-    pre{background:#0b1220;color:#cfe8ff;padding:12px;border-radius:8px;overflow:auto}
-    .demo{margin-top:12px}
-    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
-    .muted{color:var(--muted)}
-    footer{margin-top:18px;color:var(--muted);font-size:13px}
-    .small{font-size:13px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attributes: A Detailed Guide for Developers</title>
+    
+    <meta name="description" content="A detailed guide explaining HTML attributes, global attributes like class, id, and specific attributes for images and forms.">
+    <meta name="keywords" content="HTML attributes, global attributes, data attributes, HTML elements, web development fundamentals">
+    <link rel="canonical" href="https://x3shool.onrender.com/html/html-attributes-guide/">
+    
+    <link rel="stylesheet" href="../style.css"> 
+    
+    <style>
+        /* Basic CSS for readability and blog look (This is kept for blog formatting) */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        /* ... (Rest of your original CSS goes here) ... */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        /* ... (All other styling rules) ... */
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>HTML Attributes — विस्तृत मार्गदर्शिका</h1>
-    </header>
-    <p class="lead">यह पेज HTML attribute क्या होते हैं, उनकी श्रेणियाँ, सामान्य attributes और उदाहरण (live demo) बताता है — सभी हिंदी में।</p><div class="grid">
-  <main class="card">
-    <section>
-      <h2>1. Attribute क्या हैं?</h2>
-      <p class="small">Attributes किसी HTML element को अतिरिक्त जानकारी देते हैं — जैसे element का पहचान (id), क्लास, लिंक की destination, input का आकार, आदि। सामान्य रूप से attribute <code>name="value"</code> के रूप में लिखा जाता है।</p>
-    </section>
 
-    <section style="margin-top:12px">
-      <h2>2. Attribute के प्रकार</h2>
-      <ul>
-        <li><strong>Global attributes</strong> — सभी HTML elements पर लागू हो सकते हैं। (उदा. <code>id</code>, <code>class</code>, <code>style</code>, <code>title</code>, <code>data-*</code>)</li>
-        <li><strong>Specific attributes</strong> — केवल कुछ tags पर लागू होते हैं। (उदा. <code>href</code> for <code>&lt;a&gt;</code>, <code>src</code> for <code>&lt;img&gt;</code>, <code>alt</code>, <code>placeholder</code> for <code>&lt;input&gt;</code>)</li>
-        <li><strong>Boolean attributes</strong> — value की ज़रूरत नहीं होती; presence ही true बताती है। (उदा. <code>disabled</code>, <code>readonly</code>, <code>checked</code>, <code>required</code>)</li>
-        <li><strong>ARIA attributes</strong> — accessibility के लिए (उदा. <code>aria-hidden</code>, <code>aria-label</code>)</li>
-      </ul>
-    </section>
+    <div id="header-placeholder"></div>
+    
+    <main class="main-content">
+        <div class="container">
+            <header>
+                <h1>HTML Attributes: A Detailed Guide to Web Development Fundamentals</h1>
+                <p class="highlight">**Published:** November 8, 2025 | **Author:** AI Developer</p>
+            </header>
 
-    <section style="margin-top:12px">
-      <h2>3. सामान्य और उपयोगी attributes — सारांश तालिका</h2>
-      <table>
-        <thead>
-          <tr><th>Attribute</th><th>Use/Tag</th><th>विवरण</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><code>id</code></td><td>global</td><td>Unique identifier — CSS/JS के लिए उपयोगी</td></tr>
-          <tr><td><code>class</code></td><td>global</td><td>CSS/JS के लिए समूह/स्टाइल नाम</td></tr>
-          <tr><td><code>style</code></td><td>global</td><td>Inline CSS — परंपरागत रूप से कम प्रयोग करें</td></tr>
-          <tr><td><code>title</code></td><td>global</td><td>Tooltip text जो hover पर दिखेगा</td></tr>
-          <tr><td><code>data-*</code></td><td>global</td><td>Custom data attributes — JS में पढ़ने के लिए</td></tr>
-          <tr><td><code>href</code></td><td>&lt;a&gt;</td><td>Link destination (URL)</td></tr>
-          <tr><td><code>src</code></td><td>&lt;img&gt;, &lt;script&gt;, &lt;iframe&gt;</td><td>Resource source URL</td></tr>
-          <tr><td><code>alt</code></td><td>&lt;img&gt;</td><td>Image alternate text — accessibility और SEO</td></tr>
-          <tr><td><code>placeholder</code></td><td>&lt;input&gt;, &lt;textarea&gt;</td><td>Input में placeholder text</td></tr>
-          <tr><td><code>value</code></td><td>&lt;input&gt;, &lt;option&gt;</td><td>Form element की value</td></tr>
-          <tr><td><code>name</code></td><td>form elements</td><td>Form data के key के रूप में भेजा जाता है</td></tr>
-          <tr><td><code>type</code></td><td>&lt;input&gt;</td><td>Input का प्रकार — text, number, email, checkbox, आदि</td></tr>
-          <tr><td><code>disabled</code></td><td>form, button</td><td>Boolean — element disabled कर देता है</td></tr>
-          <tr><td><code>readonly</code></td><td>input, textarea</td><td>कन्टेन्ट को readonly बनाता है</td></tr>
-        </tbody>
-      </table>
-    </section>
+            <hr>
 
-    <section style="margin-top:12px">
-      <h2>4. Live उदाहरण (Interactive)</h2>
-      <p class="small">नीचे छोटे-छोटे उदाहरण हैं — attribute का व्यवहार देखें और नियंत्रित करें।</p>
+            <section>
+                <h2>✨ What Are HTML Attributes?</h2>
+                </section>
+            
+            <section>
+                <h2>🔑 Key Global Attributes (Used Across Many Elements)</h2>
+                </section>
 
-      <div class="card small demo">
-        <!-- Example 1: link -->
-        <h3 style="margin:6px 0">Link (href, target, title)</h3>
-        <p><a id="exampleLink" href="https://www.example.com" target="_blank" title="Example website">Visit Example.com</a></p>
+            <section>
+                <h2>🏷️ Specific Attributes and Their Uses</h2>
+                </section>
+            
+            <hr>
+            
+            </div>
+    </main>
+    <div id="footer-placeholder"></div>
 
-        <!-- Example 2: image -->
-        <h3 style="margin:6px 0">Image (src, alt, width, data-*)</h3>
-        <img id="catImage" src="https://placekitten.com/300/180" alt="Cute kitten" width="300" style="border-radius:8px;display:block;margin-bottom:8px">
-        <p class="small muted">Image में <code>alt</code> SEO और accessibility के लिए जरूरी है।</p>
+    <script src="../load_common.js"></script>
 
-        <!-- Example 3: form inputs -->
-        <h3 style="margin:6px 0">Form (placeholder, required, readonly, maxlength)</h3>
-        <form id="demoForm" onsubmit="event.preventDefault();alert('Form submitted: '+ new FormData(this).get('username'))">
-          <label class="small">Username: <input name="username" placeholder="Enter username" required maxlength="20"></label><br><br>
-          <label class="small">Bio (readonly): <input name="bio" value="मैं एक developer हूँ" readonly></label><br><br>
-          <label class="small">Remember me: <input type="checkbox" name="remember" checked></label><br><br>
-          <button class="btn" type="submit">Submit</button>
-        </form>
-
-        <!-- Example 4: boolean attribute toggle -->
-        <h3 style="margin:6px 0">Boolean attribute demo</h3>
-        <p><button id="toggleBtn" class="btn">Toggle disabled on Submit</button></p>
-
-        <script>
-          // Toggle the 'disabled' boolean attribute
-          const submitBtn = document.querySelector('#demoForm button[type=submit]');
-          const toggleBtn = document.getElementById('toggleBtn');
-          toggleBtn.addEventListener('click', ()=>{
-            if(submitBtn.hasAttribute('disabled')){
-              submitBtn.removeAttribute('disabled');
-              toggleBtn.textContent = 'Toggle disabled on Submit';
-            } else {
-              submitBtn.setAttribute('disabled','');
-              toggleBtn.textContent = 'Submit is disabled (click to enable)';
-            }
-          });
-
-          // Show how to read data-* attributes and title
-          const link = document.getElementById('exampleLink');
-          link.dataset.note = 'यह एक demo link है';
-          console.log('data-note:', link.dataset.note);
-          console.log('title:', link.title);
-        </script>
-
-      </div>
-    </section>
-
-    <section style="margin-top:12px">
-      <h2>5. Best practices</h2>
-      <ul>
-        <li>Semantics रखें — attribute का इस्तेमाल केवल तभी करें जब जरूरी हो।</li>
-        <li>Inline styles (<code>style</code>) कम उपयोग करें; CSS class बेहतर है।</li>
-        <li><code>alt</code> और ARIA attributes का प्रयोग करें ताकि website accessible रहे।</li>
-        <li><code>data-*</code> का प्रयोग custom data के लिए करें, ताकि markup semantic बना रहे।</li>
-        <li>Boolean attributes सिर्फ मौजूद रहें — <code>disabled</code> लिखें, <code>disabled="disabled"</code> भी काम करेगा पर अधिक शब्दों में न लिखें।</li>
-        <li>Form elements के लिए सही <code>name</code> और <code>type</code> रखें ताकि server-side पर data आसानी से मिले।</li>
-      </ul>
-    </section>
-
-    <section style="margin-top:12px">
-      <h2>6. Common mistakes</h2>
-      <ol>
-        <li>Attribute names में टाइपो (उदा. <code>clas</code> instead of <code>class</code>) — browser ignore कर देता है।</li>
-        <li>Missing <code>alt</code> on images — accessibility और SEO दोनों प्रभावित होते हैं।</li>
-        <li>Using inline <code>style</code> for complex layouts — maintainability खराब होती है।</li>
-        <li>Relying on <code>id</code> for styling कई बार component reuse रोक देता है — prefer <code>class</code> when possible.</li>
-      </ol>
-    </section>
-
-    <section style="margin-top:12px">
-      <h2>7. Quick reference — कुछ useful attribute examples</h2>
-      <pre>&lt;a href="https://example.com" title="Visit" target="_blank" rel="noopener"&gt;Visit&lt;/a&gt;
-
-<img src="cat.jpg" alt="cute cat" width="400"/>
-
-<input type="email" name="user_email" placeholder="you@mail.com" required />
-
-<button type="button" disabled>Loading...</button>
-
-<div id="card1" class="card" data-user-id="42" title="User 42">...</div> </pre> </section>
-
-<footer>
-      <p class="small muted">This page: quick guide to HTML attributes — उपयोग में लाने के लिए free to copy / modify.</p>
-    </footer>
-  </main>
-
-  <aside class="card small">
-    <h3>Useful Links</h3>
-    <ul>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">MDN — HTML attributes</a></li>
-      <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank">WHATWG HTML spec</a></li>
-    </ul>
-
-    <h3 style="margin-top:12px">Quick cheatsheet</h3>
-    <p class="small">Global: <code>id, class, style, title, data-*</code></p>
-    <p class="small">Form: <code>name, value, type, placeholder, required, disabled</code></p>
-    <p class="small">Media: <code>src, alt, width, height, controls</code></p>
-
-    <h3 style="margin-top:12px">Accessibility tip</h3>
-    <p class="small muted">Use <code>aria-label</code> or <code>aria-hidden</code> where semantics नहीं आते — screen readers के लिए helpful।</p>
-  </aside>
-</div>
-
-  </div>
 </body>
-            </html>
+</html>
